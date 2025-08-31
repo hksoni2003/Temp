@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="in-text" default-locale="en-US">
+  <info>
+    <title>IJHS Vancouver Superscript Fixed</title>
+    <id>http://www.zotero.org/styles/ijhs-vancouver-superscript-fixed</id>
+    <link href="http://www.zotero.org/styles/vancouver" rel="template"/>
+    <author>
+      <name>Custom Author</name>
+      <email>support@example.com</email>
+    </author>
+    <category citation-format="numeric"/>
+    <category field="medicine"/>
+    <updated>2025-08-31T15:19:00+00:00</updated>
+    <summary>Vancouver style with superscript citations in square brackets for IJHS, following ICMJE guidelines with en-dash page ranges.</summary>
+  </info>
+  <macro name="author">
+    <names variable="author">
+      <name initialize-with="" delimiter=", " and="text" sort-separator=" " name-as-sort-order="all"/>
+      <et-al font-style="normal" et-al-min="7" et-al-use-first="6"/>
+    </names>
+  </macro>
+  <macro name="editor">
+    <names variable="editor">
+      <name initialize-with="" delimiter=", " and="text" sort-separator=" " name-as-sort-order="all"/>
+      <label form="short" prefix=", " suffix=""/>
+    </names>
+  </macro>
+  <macro name="title">
+    <text variable="title"/>
+  </macro>
+  <macro name="journal">
+    <text variable="container-title" form="short"/>
+  </macro>
+  <macro name="year">
+    <date variable="issued">
+      <date-part name="year"/>
+    </date>
+  </macro>
+  <macro name="pages">
+    <text variable="page" form="short"/>
+  </macro>
+  <citation collapse="citation-number">
+    <sort>
+      <key variable="citation-number"/>
+    </sort>
+    <layout prefix="[" suffix="]" delimiter=", ">
+      <text variable="citation-number" font-variant="superscript"/>
+    </layout>
+  </citation>
+  <bibliography>
+    <layout>
+      <text variable="citation-number" suffix=". "/>
+      <group delimiter=". ">
+        <text macro="author"/>
+        <text macro="title"/>
+        <text macro="journal"/>
+        <text macro="year"/>
+        <text variable="volume"/>
+        <text macro="pages"/>
+      </group>
+    </layout>
+  </bibliography>
+</style>
