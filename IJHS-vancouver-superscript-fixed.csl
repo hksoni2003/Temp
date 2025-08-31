@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="in-text"
+  default-locale="en-US" page-range-format="minimal" demote-non-dropping-particle="sort-only">
+  <info>
+    <title>IJHS (Vancouver superscript)</title>
+    <title-short>IJHS Vancouver</title-short>
+    <id>http://www.zotero.org/styles/ijhs-vancouver-superscript</id>
+    <link href="http://www.zotero.org/styles/vancouver-superscript" rel="template"/>
+    <category citation-format="numeric"/>
+    <category field="medicine"/>
+    <updated>2025-08-31T00:00:00+00:00</updated>
+    <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This style is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
+  </info>
+
+  <!-- Macros -->
+  <macro name="author">
+    <names variable="author" delimiter=", " et-al-min="7" et-al-use-first="6">
+      <name form="long" initialize-with="" and="text" delimiter=", "/>
+      <et-al term="et-al"/>
+    </names>
+  </macro>
+
+  <macro name="issued-year">
+    <date variable="issued">
+      <date-part name="year"/>
+    </date>
+  </macro>
+
+  <macro name="title">
+    <text variable="title"/>
+  </macro>
+
+  <macro name="journal">
+    <text variable="container-title" form="short"/>
+  </macro>
+
+  <macro name="volume-issue">
+    <group>
+      <text variable="volume"/>
+      <text variable="issue" prefix="(" suffix=")"/>
+    </group>
+  </macro>
+
+  <macro name="pages">
+    <text variable="page"/>
+  </macro>
+
+  <!-- Citations -->
+  <citation collapse="citation-number">
+    <sort>
+      <key variable="citation-number"/>
+    </sort>
+    <layout vertical-align="sup" delimiter="," prefix="[" suffix="]">
+      <text variable="citation-number"/>
+    </layout>
+  </citation>
+
+  <!-- Bibliography -->
+  <bibliography>
+    <layout>
+      <text variable="citation-number" suffix=". "/>
+      <text macro="author" suffix=". "/>
+      <text macro="title" suffix=". "/>
+      <text macro="journal" suffix=" "/>
+      <text macro="issued-year" suffix=";"/>
+      <text macro="volume-issue"/>
+      <text macro="pages" prefix=":" suffix="."/>
+    </layout>
+  </bibliography>
+</style>
